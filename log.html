@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSM 2027 | Login</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <script src="https://gstatic.com"></script>
+    <script src="https://gstatic.com"></script>
+    <style>
+        :root { --primary: #00ff88; --bg: #050505; --card: #0f0f0f; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif; }
+        body { background: var(--bg); color: white; height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .login-card { background: var(--card); padding: 40px; border-radius: 30px; width: 100%; max-width: 380px; border: 1px solid #222; box-shadow: 0 10px 40px rgba(0,0,0,0.8); }
+        .logo { font-size: 26px; font-weight: 900; color: var(--primary); text-align: center; margin-bottom: 30px; }
+        input { width: 100%; padding: 14px; margin-bottom: 15px; background: #000; border: 1px solid #333; color: white; border-radius: 12px; outline: none; transition: 0.3s; }
+        input:focus { border-color: var(--primary); }
+        .btn-login { width: 100%; padding: 15px; background: var(--primary); border: none; color: #000; font-weight: 900; border-radius: 12px; cursor: pointer; transition: 0.3s; }
+        .btn-login:hover { transform: scale(1.02); }
+        .footer { text-align: center; margin-top: 25px; font-size: 13px; color: #666; }
+        .footer a { color: var(--primary); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="logo">SSM INVEST</div>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email-kaaga" required>
+            <input type="password" id="password" placeholder="Password-ka" required>
+            <button type="submit" class="btn-login" id="loginBtn">SOO GALI</button>
+        </form>
+        <div class="footer">
+            Ma haysatid Account? <a href="reg.html">Is-diiwaangali</a>
+        </div>
+    </div>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBb-ImHhrN8XUe0Nihku-ZBSxUDCibaorA",
+            authDomain: "://firebaseapp.com",
+            projectId: "ssm-invest",
+            storageBucket: "ssm-invest.firebasestorage.app",
+            messagingSenderId: "1029622095378",
+            appId: "1:1029622095378:web:01d95a354b582c0f7902cb"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('loginBtn');
+            btn.innerText = "WAA LA HUBINAYAA...";
+            try {
+                await auth.signInWithEmailAndPassword(email.value, password.value);
+                window.location.href = "index.html";
+            } catch (err) { alert("Cilad: Email-ka ama Password-ka waa khalad!"); btn.innerText = "SOO GALI"; }
+        });
+    </script>
+</body>
+</html>
