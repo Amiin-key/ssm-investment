@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSM INVEST | Maalgashiga Geeska Afrika</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00ff88;
+            --bg: #050505;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: white;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle at center, #111, #050505);
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            color: #888;
+            max-width: 500px;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-weight: 900;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .btn-outline {
+            border: 1px solid #333;
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,255,136,0.2);
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div style="color:var(--primary); font-weight:bold; letter-spacing:3px; margin-bottom:10px;">
+            WELCOME TO SSM 2027
+        </div>
+
+        <h1>Maalgashiga <span>Mustaqbalka</span> ee Soomaaliya</h1>
+
+        <p>
+            Ku biir kunka qof ee maalin walba faa'iidada ka hela shirkadda ugu weyn Geeska Afrika.
+            Amni, Kalsooni, iyo Horumar.
+        </p>
+
+        <div class="cta-btns">
+            <a href="register.html" class="btn btn-primary">BILOW HADDA</a>
+            <a href="login.html" class="btn btn-outline">SOO GALI</a>
+        </div>
+    </div>
+</body>
+</html>
